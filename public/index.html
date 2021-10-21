@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeddlabz | We solve problems</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
       /* width */
@@ -35,21 +36,48 @@
   <body class="font-poppins">
 
     <!-- Header -->
-    <header class="text-black body-font shadow-md sticky top-0 z-50 bg-white">
-        <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-          <a href="index.html" 
-          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="..\assets\img\zeddlabz logo.png" alt="" class="bg-blue-1"></img>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-xl justify-center font-medium">
-            <a href="" class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">About</a>
-            <a href="" class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Services</a>
-            <a href="" class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Clients</a>
-            <a href="" class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Consultation</a>
-            <a href="contact.html" class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Contact</a>
-          </nav>
-        </div>
-      </header>
+    <header class="bg-white w-full sticky top-0 z-50" x-data="{ mobileMenuOpen : false }">
+      <nav class="px-6 py-4 shadow">
+          <div class="lg:items-center lg:justify-between lg:flex">
+              <div class="flex items-center justify-between">
+                  <div>
+                      <img src="./../assets/img/zeddlabz logo.png" alt="" class="w-40 bg-blue-1" />
+                  </div>
+
+                  <!-- Mobile menu button -->
+                  <div class="lg:hidden">
+                      <button type="button"
+                          @click="mobileMenuOpen = !mobileMenuOpen"
+                          class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                          aria-label="Toggle menu" >
+                          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                              <path
+                                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                              </path>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+
+              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+              
+              <div class="flex flex-col text-xl lg:flex-row lg:block"
+              :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+                  <a href="index.html"
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Home</a>
+                  <a href="about.html"
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">About</a>
+                  <a href="services.html"
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Services</a>
+                  <a href="clients.html"
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Blog</a>
+                  <a href="contact.html"
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Contact</a>
+              </div>
+          </div>
+      </nav>
+
+  </header>
 
       <!-- Hero Section -->
 <div class="relative bg-white overflow-hidden">

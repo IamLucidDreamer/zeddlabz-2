@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeddlabz | We solve problems</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../src/customstyles.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
       /* width */
@@ -33,16 +35,16 @@
       }
     </style>
   </head>
-  <body class="font-poppins">
+  <body class="font-poppins" id="body">
 
     <!-- Header -->
-    <header class="bg-white w-full sticky top-0 z-50" x-data="{ mobileMenuOpen : false }">
+    <header class="bg-white w-full sticky top-0 z-50 container mx-auto" x-data="{ mobileMenuOpen : false }">
       <nav class="px-6 py-4 shadow">
           <div class="lg:items-center lg:justify-between lg:flex">
               <div class="flex items-center justify-between">
-                  <div>
+                  <a href="index.html">
                       <img src="./../assets/img/zeddlabz logo.png" alt="" class="w-40 bg-blue-1" />
-                  </div>
+                  </a>
 
                   <!-- Mobile menu button -->
                   <div class="lg:hidden">
@@ -63,14 +65,12 @@
               
               <div class="flex flex-col text-xl lg:flex-row lg:block"
               :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
-                  <a href="index.html"
-                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Home</a>
                   <a href="about.html"
                       class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">About</a>
                   <a href="services.html"
                       class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Services</a>
                   <a href="clients.html"
-                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Blog</a>
+                      class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Clients</a>
                   <a href="contact.html"
                       class="mr-10 hover:text-blue-1 duration-300 border-b-2 border-white hover:border-blue-1">Contact</a>
               </div>
@@ -80,10 +80,10 @@
   </header>
 
       <!-- Hero Section -->
-<div class="relative bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-        <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-blue-1 transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  <div class="bg-white relative bg-transparent overflow-hidden" data-aos="zoom-in-down" data-aos-duration="500">
+    <div class="container px-4 sm:px-8 lg:px-16 mx-auto">
+      <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <svg class="hidden lg:block absolute right-0 2xl:-mr-8 inset-y-0 h-full w-56 xl:w-72 text-blue-1 transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <polygon points="50,0 100,0 50,100 0,100" />
         </svg>
   
@@ -92,11 +92,11 @@
           </div>
         </div>
   
-        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <main class="mt-10 lg:mt-20 2xl:mt-32">
           <div class="sm:text-center lg:text-left">
-            <h1 class="tracking-tight text-gray-900 text-6xl sm:text-7xl md:text-9xl">
-              <span class="block xl:inline text-gray-700">We Solve</span>
-              <span class="block text-blue-1 xl:inline">Problems</span>
+            <h1 class="tracking-tight text-gray-900 text-6xl sm:text-7xl lg:text-8xl">
+              <span class="block xl:inline text-gray-700 from-gray-700 to-blue-400">Digitally Sure For Your</span>
+              <span class="block text-blue-1 xl:inline">Business</span>
             </h1>
             <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
@@ -115,57 +115,53 @@
   </div>
 
 <!-- Section 2 -->
-<section class="bg-blue-1">
+<section class="bg-blue-1 min-h-screen flex items-center" data-aos="zoom-in-down" data-aos-duration="500">
 <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
-  <div class="flex flex-col lg:flex-row lg:items-center">
+  <div class="flex flex-col lg:flex-row lg:items-center justify-evenly">
     <div class="w-full lg:w-1/2">
-      <h1 class="text-6xl sm:text-7xl md:text-9xl text-gray-200 font-semiboldbold">We Solve Problems</h1>
+      <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-gray-200 font-semiboldbold">Here to Create</h1>
     </div>
-    <div class="w-full lg:w-1/2">
-      <p class="text-2xl lg:text-3xl text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum, asperiores, beatae sed incidunt facere optio cumque delectus iure fugit soluta modi quam eligendi sapiente tenetur vel non quisquam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit magni, numquam laudantium incidunt dolore esse vel, nostrum laborum est voluptatibus debitis placeat earum praesentium, odio vero voluptate sint exercitationem?</p>
+    <div class="w-full lg:w-1/2 lg:pl-4 py-2">
+      <p class="text-2xl 2xl:text-3xl text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum, asperiores, beatae sed incidunt facere optio cumque delectus iure fugit soluta modi quam eligendi sapiente tenetur vel non quisquam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit magni, numquam laudantium incidunt dolore esse vel, nostrum laborum est voluptatibus debitis placeat earum praesentium, odio vero voluptate sint exercitationem?</p>
     </div>
   </div>
 </div>
 </section>
 
+
 <!-- Section 3 -->
-<section class="bg-blue-200">
-  <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
-      <div class="w-full">
-        <h1 class="text-6xl sm:text-7xl md:text-9xl text-gray-700 font-semiboldbold">We do anything for you.</h1>
-      </div>
-      <div class="flex flex-col lg:flex-row items-center">
-      <div class="w-full lg:w-1/2 py-6">
-        <p class="text-2xl lg:text-3xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum, asperiores, beatae sed incidunt facere optio cumque delectus iure fugit soluta modi quam eligendi sapiente tenetur vel non quisquam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit magni, numquam laudantium incidunt dolore esse vel, nostrum laborum est voluptatibus debitis placeat earum praesentium, odio vero voluptate sint exercitationem?</p>
-      </div>
-      <div class="w-full lg:w-1/2 p-4">
-        <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="mx-auto">
+<section class="bg-blue-200 min-h-screen flex items-center" data-aos="zoom-in-down" data-aos-duration="500">
+  <div class="container py-20 2xl:py-32 px-4 sm:px-8 lg:px-16 mx-auto">
+      <div class="w-full mb-5">
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-gray-700 font-semiboldbold leading-loose">We grow businesses by creating unified <span class="underline text-blue-1">brand experiences </span>people love.</h1>
       </div>
     </div>
   </div>
   </section>
+
+
   <!-- Section 4 -->
-  <section class="bg-gray-200">
+  <section class="bg-gray-200 min-h-screen flex items-center" data-aos="zoom-in-down" data-aos-duration="500">
     <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
-        <div class="w-full">
-          <h1 class="text-6xl sm:text-7xl md:text-9xl text-blue-400 font-semiboldbold">We do anything for you.</h1>
+        <div class="w-full mb-5">
+          <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-400 font-semiboldbold">Enterprise software that doesn't suck.</h1>
         </div>
-        <div class="flex flex-col-reverse lg:flex-row items-center">
-          <div class="w-full lg:w-1/2 p-4">
-            <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="mx-auto">
-          </div>
+        <div class="flex flex-col lg:flex-row items-center">
           <div class="w-full lg:w-1/2 py-6">
-          <p class="text-2xl lg:text-3xl text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum, asperiores, beatae sed incidunt facere optio cumque delectus iure fugit soluta modi quam eligendi sapiente tenetur vel non quisquam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit magni, numquam laudantium incidunt dolore esse vel, nostrum laborum est voluptatibus debitis placeat earum praesentium, odio vero voluptate sint exercitationem?</p>
-        </div>
+            <p class="text-2xl 2xl:text-3xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum, asperiores, beatae sed incidunt facere optio cumque delectus iure fugit soluta modi quam eligendi sapiente tenetur vel non quisquam consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit magni, numquam laudantium incidunt dolore esse vel, nostrum laborum est voluptatibus debitis placeat earum praesentium, odio vero voluptate sint exercitationem?</p>
+          </div>
+          <div class="w-full lg:w-1/2 p-4">
+              <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="mx-auto">
+          </div>
       </div>
     </div>
     </section>
 
   <!-- Section 5 -->
-  <section class="bg-white">
+  <section class="bg-white" data-aos="zoom-in-down" data-aos-duration="500">
     <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
         <div class="w-full">
-          <h1 class="text-6xl sm:text-7xl md:text-9xl text-blue-1 font-semiboldbold">Problems We Solve</h1>
+          <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-1 font-semiboldbold">Problems We Solve</h1>
         </div>
         <div class="flex flex-col-reverse lg:flex-row items-center">
           <div class="w-full lg:w-1/2 p-4">
@@ -185,45 +181,60 @@
       </div>
     </div>
     </section>
+
     <!-- Section 6 -->
-  <section class="bg-gray-200">
+<section class="bg-blue-200 min-h-screen flex items-center" data-aos="zoom-in-down" data-aos-duration="500">
+  <div class="container py-20 2xl:py-32 px-4 sm:px-8 lg:px-16 mx-auto">
+      <div class="w-full my-5">
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-300 font-semiboldbold leading-loose my-4">We <span class="underline text-blue-1">Detect.</span></h1>
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-400 font-semiboldbold leading-loose my-4">We <span class="underline text-blue-1">Define.</span></h1>
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-500 font-semiboldbold leading-loose my-4">We <span class="underline text-blue-1">Develope.</span></h1>
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-600 font-semiboldbold leading-loose my-4">We <span class="underline text-blue-1">Deliver.</span></h1>
+      </div>
+    </div>
+  </div>
+  </section>
+
+    <!-- Section 7 -->
+  <section class="bg-gray-200" data-aos="zoom-in-down" data-aos-duration="500">
     <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
         <div class="w-full">
-          <h1 class="text-6xl sm:text-7xl md:text-9xl text-blue-1 ">Believe The Results</h1>
+          <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-blue-1 ">Believe The Results</h1>
         </div>
-        <div class="flex flex-col justify-center items-center">
-          <div class="flex w-full m-4">
-            <div class="group bg-blue-1 bg-no-repeat bg-cover bg-center border-20 border-white mx-auto" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
-              <div class="flex items-center justify-center bg-transparent group-hover:bg-blue-1 h-72 sm:h-96 w-60 sm:w-96 sm:px-64 md:px-72 lg:px-96 duration-300">
-                <a href="" class="text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200">Client Name</a>
+        <div class="">
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
+              </div>
+            </div>
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
               </div>
             </div>
           </div>
-          <div class="flex w-full m-4">
-            <div class="group bg-blue-1 bg-no-repeat bg-cover bg-center border-20 border-white mx-auto" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
-              <div class="flex items-center justify-center bg-transparent group-hover:bg-blue-1 h-72 sm:h-96 w-60 sm:w-96 sm:px-64 md:px-72 lg:px-96 duration-300">
-                <a href="" class="text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200">Client Name</a>
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
+              </div>
+            </div>
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
               </div>
             </div>
           </div>
-          <div class="flex w-full m-4">
-            <div class="group bg-blue-1 bg-no-repeat bg-cover bg-center border-20 border-white mx-auto" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
-              <div class="flex items-center justify-center bg-transparent group-hover:bg-blue-1 h-72 sm:h-96 w-60 sm:w-96 sm:px-64 md:px-72 lg:px-96 duration-300">
-                <a href="" class="text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200">Client Name</a>
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
               </div>
             </div>
-          </div>
-          <div class="flex w-full m-4">
-            <div class="group bg-blue-1 bg-no-repeat bg-cover bg-center border-20 border-white mx-auto" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
-              <div class="flex items-center justify-center bg-transparent group-hover:bg-blue-1 h-72 sm:h-96 w-60 sm:w-96 sm:px-64 md:px-72 lg:px-96 duration-300">
-                <a href="" class="text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200">Client Name</a>
-              </div>
-            </div>
-          </div>
-          <div class="flex w-full m-4">
-            <div class="group bg-blue-1 bg-no-repeat bg-cover bg-center border-20 border-white mx-auto" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
-              <div class="flex items-center justify-center bg-transparent group-hover:bg-blue-1 h-72 sm:h-96 w-60 sm:w-96 sm:px-64 md:px-72 lg:px-96 duration-300">
-                <a href="" class="text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200">Client Name</a>
+            <div class="group flex w-full md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2VydmljZXMlMjBjcmVhdGl2ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+              <div class="flex items-center justify-center bg-transparent duration-300 w-full group group-hover:bg-blue-1 border-8 md:border-20">
+                  <a href="" class="flex text-5xl text-center mb-2 font-semibold text-transparent group-hover:text-gray-200 py-56 ">Client Name</a>
               </div>
             </div>
           </div>
@@ -234,10 +245,10 @@
     
 
     <!-- CTA Section -->
-    <section class="bg-blue-1">
+    <section class="bg-blue-1" data-aos="zoom-in-down" data-aos-duration="500">
       <div class="container py-20 px-4 sm:px-8 lg:px-16 mx-auto">
-          <div class="w-full">
-            <h1 class="text-6xl sm:text-7xl md:text-9xl text-white font-semiboldbold">Wanna Explore More</h1>
+          <div class="w-full mb-10">
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl text-white font-semiboldbold">Wanna Explore More</h1>
           </div>
           <div class="flex flex-row items-center">
             <a href="" class="mx-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium text-blue-1 bg-white hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
@@ -256,10 +267,15 @@
             <img src="..\assets\img\zeddlabz logo.png" alt="" class="bg-gray-900"></img>
           </a>
           <p class="mt-2 text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit fuga quod quis.</p>
+          <div class="flex flex-col">
+            <a href="" class="mt-2 text-sm text-gray-200 hover:text-blue-400">Phone Number</a>
+            <a href="" class="mt-2 text-sm text-gray-200 hover:text-blue-400">Phone Number</a>
+            <a href="" class="mt-2 text-sm text-gray-200 hover:text-blue-400">Phone Number</a>
+          </div>    
         </div>
         <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">Services</h2>
             <nav class="list-none mb-10">
               <li>
                 <a class="text-gray-200 hover:text-gray-800">Link</a>
@@ -276,7 +292,7 @@
             </nav>
           </div>
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">Case Studies</h2>
             <nav class="list-none mb-10">
               <li>
                 <a class="text-gray-200 hover:text-gray-800">Link</a>
@@ -293,7 +309,7 @@
             </nav>
           </div>
           <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
+            <h2 class="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">Useful Links</h2>
             <nav class="list-none mb-10">
               <li>
                 <a class="text-gray-200 hover:text-gray-800">Link</a>
@@ -331,7 +347,7 @@
       <div class="bg-gray-900">
         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 Zeddlabz —
-            <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@Manas</a>
+            <a href="https://github.com/IamLucidDreamer" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@Manas</a>
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a class="text-gray-500">
@@ -360,6 +376,13 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
   </body>
 
 
